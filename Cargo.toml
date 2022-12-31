@@ -2,5 +2,9 @@
 name = "casus"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "A simple library containing a handful of event-based async primitives"
+repository = "https://github.com/mrvillage/casus"
+documentation = "https://docs.rs/casus"
 
 [dependencies]
