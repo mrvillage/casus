@@ -2,7 +2,7 @@
 //!
 //! ## Event
 //!
-//! The Event primitive allows a future to await the completion of an event. Once the event is completed, all futures trying to await it will immediately return and continue until the event is reset.
+//! The Event primitive allows a future to await the completion of an event. Once the event is completed, all futures trying to await it will immediately wake up and any future calls will immediately return until the event is reset.
 //!
 //! ```rs
 //! use casus::Event;
@@ -31,7 +31,7 @@ use std::{
     sync::{Arc, Mutex, RwLock},
     task::{Poll, Waker},
 };
-/// The Event primitive allows a future to await the completion of an event. Once the event is completed, all futures trying to await it will immediately return and continue until the event is reset.
+/// The Event primitive allows a future to await the completion of an event. Once the event is completed, all futures trying to await it will immediately wake up and any future calls will immediately return until the event is reset.
 ///
 /// # Example
 ///
